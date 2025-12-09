@@ -1,4 +1,17 @@
 # **LAPD Crime Analysis (2020-2023)**
+## Table of Contents
+- [Project Background](#project-background)
+- [Data Model](#data-model)
+- [Executive Summary](#executive-summary)
+- [Insights](#insights)
+  - [Crime Over Time](#crime-over-time)
+  - [Crime Characteristics](#crime-characteristics)
+  - [Crime Hotsposts](#crime-hotspots)
+  - [Victim Demographics](#victim-demographics)
+- [Recommendations](#recommendations)
+- [Notes & Other Caveats](#notes--other-caveats)
+- [Tools & Resources Used](#tools--resources-used)
+
 ## Project Background
 This report was created to analyze the crimes committed in the city of Los Angeles (LA) from the years 2020 to 2023. The goal of the report is to help the Los Angeles Police Department (LAPD) with resource allocation as well as provide the citizens of LA with a better understanding of the crimes being committed in their city. To enhance exploration, users have the ability to filter through specific years and months to further analyze crime trends. 
 
@@ -36,7 +49,7 @@ A detailed analysis can be found in the following section where the insights of 
 ![Overview Tab](/Images/Overview_Tab.png)
 
 ## Insights
-### Crimes Over Time:
+### Crime Over Time:
 - The amount of crimes committed throughout the year tend to be committed in the second half of the year. Specifically, majority of the crimes happened during the summer and early fall with **July, August, and October** each having around **76,000** cases.
 
 - Crimes appear to happen more often towards the end of the day with a signifianct spike at **12 PM** with about **60,000** cases. The following next two hours with high crime activity are **6 PM** with around **52,000** cases and **5 PM** with about **51,000** cases.  
@@ -81,20 +94,29 @@ Overall, the findings indicate that the majority of the victims are working-age 
 ![Vict Demo Tab](/Images/Victim_Demographics_Tab.png)
 
 ## Recommendations
-There are a few things that could be done in order to help decrease the crime rates in Los Angeles.
+#### 1. **Strategically allocate** and/or **increase law enforcement** in high crime divisions/areas and times. 
+**Related Insights:**
+  - The **top 3 divisions/areas** with the highest crime volumes are **Central (~60k), 77th Street (~55K), and Pacific (~51K)**.
+  - Crimes peak at **12PM (~60k)**, with majority of the crimes occuring in the **PM** hours of the day **(64%)**. 
+  - **Majority** of the crimes occured in **Summer-Fall**, with the **top 3 months** being **July(~76K), August(~76K), and October(~76K)**.
+  - **Top 2 days** with highest crime volumes are on **Friday(~134K) and Saturday(~128K)**.
 
-1. **Increase surveillance** and ensure that both law enforcement and monitoring systems are **visibly present** in locations of high crime rates.
+  **Expected Impact**: Increasing law enforcement presence in **times** and **areas of higher crime rates**, can result in quicker response times to discourage criminal activity and improve overall control of the city. 
 
-2. **Educate the public** on **statistics** of high rated crimes, times of peak activity, locations, and victims being targeted.
+#### 2. **Increase surveillance** and ensure that both **law enforcement and monitoring systems are visibly present** in locations of high crime rates.
+**Related Insights:**
+- **Streets (~221k), Parking lots (~61k), Sidewalks (~37k), and Garage/Carports (~17k)** are all public locations and are 4 of the top 8 premises where crimes are commited.
 
-3. **Reallocation of patrol and law enforcement** to times and locations of higher crime rates. 
+**Expected Impact**: Criminals feel more inclined in commiting a crime when they know they are not being seen. **Increasing** and **making surveillance visibly present** will make criminals feel monitored, making them less motivated in committing crimes.
 
-### How will these recommendations help?
--  Criminals often commit crimes when they feel they are not being seen and are unlikely to get caught. **Increasing** and **making surveillance visibly present** will make criminals feel as if they are being monitored making them less motivated to commit crimes.
+#### 3. **Educate the public** on **statistics and prevention techniques** of high rated crimes, peak activity times, and targeted victims/locations.
+**Related Insights:**
+  - The most affected age groups are **30-39 (~174k) and 20-29 (~159k)**.
+  - **Hispanic/Latin/Mexican (~268k), White (~178k), and Black (~124k)** descent groups are frequently victimized by crimes.
+  - Private residences like **Single (~149k) and Multi-unit dwellings (~108k)** are 2 of the top 3 premises where crimes occur.
+  - **Simple Assaults (~149k) and Burglary (Theft from Vehicle) (~121k)** are the most common crime categories. 
 
-- Many indivduals become victims of crime because they are uninformed of crime trends, high-crime rated areas, and peak crime times in their city. By **educating them of these patterns**, they will be able to take precautionary measures to reduce the rate of becoming victims. 
-
-- **Strategic allocation of patrol and law enforcement**, such as increasing law enforcement activity in **times** and **areas of higher crime rates**, can result in greater surveillance and quicker response times to discourage criminal activity and improve overall control of the city. 
+**Expected Impact**: Many indivduals become victims of crime because they are uninformed of crime trends and high-crime rated areas/time periods. By **educating the public on these patterns and prevention techniques**, they will be able to take precautionary measures to reduce the rate of becoming victims.  
 
 ## Notes & Other Caveats
 - Some criminal records stated that the victim's age was zero but the crime committed was very unlikely to happen to them such as vehicle thefts. Since the age of these crimes can be ambigious, as it can mean both infant or unknown, these ages were considered as null (unknown) to avoid any false representation. 
@@ -104,11 +126,11 @@ There are a few things that could be done in order to help decrease the crime ra
 - Criminal records that occured in 2024 and 2025 were excluded as the data in these years was incomplete and inconsistent. LAPD and other agencies started to implement a new system for recording crimes in early 2024. While they were transitioning, some records were still being recorded in the old system which is why the years 2024 and 2025 had inconsistent and missing records.
 
 ## Tools & Resources Used
-- **Data Setup:** MySQL (code can be found [here](/Code/Crime_Data_Setup.sql))
-- **Data Cleaning:** MySQL (code can be found [here](/Code/Crime_Data_Clean.sql)) & Power Query (in Power BI)
+- **Data Setup:** MySQL (code can be found [here](/Code/Crime_Data_Setup.sql)).
+- **Data Cleaning:** MySQL (code can be found [here](/Code/Crime_Data_Clean.sql)) & Power Query (in Power BI).
 
-- **Data Modeling:** MySQL (code can be found [here](/Code/Crime_Data_Norm.sql))
+- **Data Modeling:** MySQL (code can be found [here](/Code/Crime_Data_Norm.sql)).
 
-- **Data Visualization:** Power BI (DAX)
+- **Data Visualization:** Power BI (DAX).
 
-- **Original Dataset:** The "Crime Data from 2020 to Present" dataset by LAPD can be found [here](https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-Present/2nrs-mtv8/about_data)
+- **Original Dataset:** The "Crime Data from 2020 to Present" dataset by LAPD can be found [here](https://data.lacity.org/Public-Safety/Crime-Data-from-2020-to-Present/2nrs-mtv8/about_data).
